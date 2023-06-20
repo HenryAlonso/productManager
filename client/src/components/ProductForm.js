@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import styles from '../styles.module.css';
 
-const ProductForm = () => {
+const ProductForm = (props) => {
+    const {product, setProduct} = props;
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState("");
@@ -18,6 +19,7 @@ const ProductForm = () => {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
+                setProduct([...product, res.data])
             })
             .catch(err => console.log(err));
     }

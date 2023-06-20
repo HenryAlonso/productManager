@@ -29,6 +29,13 @@
     border-radius: 15px;
     align-self: center;
 }
-.submit :hover{
-    background-color: rgb(179, 176, 176);
+.submit:hover{
+    background-color: rgb(210, 208, 208);
+}
+.simpleList{
+    list-style-type: none;
+}
+.detail{
+    border: 1px solid black;
+    margin: 25px 0;
 }
